@@ -1,0 +1,21 @@
+
+g	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÇÑä¢Ï1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëî¸›8ÈÑä¢Ï1
+m	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÒŸ8ÈÑä¢Ï1
+n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëî¸›8ÈÑä¢Ï1
+7
+java:S1220""Move this file to a named package.8Œƒå¢Ï1
+X	java:S107\"<Method has 8 parameters, which is greater than 7 authorized.(“‹—‚8¸Òä¢Ï1
+D
+java:S1481"'Remove this unused "ID" local variable.(ëî¸›8ºÒä¢Ï1
+G
+java:S5869#"*Remove duplicates in this character class.(ş”»‘8¼Òä¢Ï1
+C	java:S1313""Add a default case to this switch.(ÌÓğûÿÿÿÿ8½Òä¢Ï1
+9
+java:S62054"Remove this redundant block.(ıÏ­µ8¾Òä¢Ï1
+>
+java:S62057"Remove this redundant block.(”ëƒÏøÿÿÿÿ8¾Òä¢Ï1
+>
+java:S6205:"Remove this redundant block.(ûÀ´½ùÿÿÿÿ8¾Òä¢Ï1
+G	java:S106M"+Replace this use of System.out by a logger.(™°õĞ8ÁÒä¢Ï1
+G	java:S106m"+Replace this use of System.out by a logger.(™°õĞ8ÄÒä¢Ï1
