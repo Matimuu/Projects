@@ -1,24 +1,16 @@
+/*
+ * Author: Omar Enrique Mendoza Perez
+ * Date: 17/1/2024.
+ */
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("Hello World!");
-        //happense-before
-        new SayHi().start();
-        for(int i = 0; i != 10; i++) {
-            System.out.println("And another time HI!");
-            Thread.sleep(300);
-        }
-    }
-    public static class SayHi extends Thread {
-        @Override
-        public void run() {
-            for (char item : "Hello Juan".toCharArray()) {
-                System.out.println(item);
-                try {
-                    Thread.sleep(300);
-                } catch (InterruptedException e) {
-                    e.getStackTrace();
-                }
-            }
-        }
+        Person firstPerson = new Person("Omar", 87, 186,23);
+        System.out.println(firstPerson);
+        firstPerson.setHeight(70);
+        System.out.println(firstPerson);
+
+        Person errorPerson = new Person("Error", -1, 12, 0);
+        System.out.println(errorPerson);
+
     }
 }
