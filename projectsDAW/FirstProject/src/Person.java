@@ -9,7 +9,7 @@ public class Person {
     private double height;
     private int age;
     private double bmi;
-    private String name;
+    private String name, bmiPrime;
 
     //Constructor
     public Person(String name, double weight, double height, int age) throws DataException {
@@ -18,20 +18,27 @@ public class Person {
             this.height = height;
             this.age = age;
             this.name = name;
-        }
-        else throw new DataException();
+        } else throw new DataException();
 
         calculateBMI();
+
     }
 
     //Functionality
     private void calculateBMI() {
         bmi = (weight / height / height) * 10_000;
+        checkBMIprime();
     }
 
-    @Override
-    public String toString() {
-        return String.format("%s, with your age(%d), height(%.2f) and weight(%.2f), you have BMI rating %.2f", name, age, height, weight, bmi);
+    private void checkBMIprime() {
+        if (bmi < 16) bmiPrime = "Severe Thinness";
+        else if (bmi >= 16 && bmi <= 17) bmiPrime = "Moderate Thinness";
+        else if (bmi >= 17 && bmi <= 18.5) bmiPrime = "Mild Thinness";
+        else if (bmi >= 18.5 && bmi <= 25) bmiPrime = "Normal";
+        else if (bmi >= 25 && bmi <= 30) bmiPrime = "Overweight";
+        else if (bmi >= 30 && bmi <= 35) bmiPrime = "Obese Class I";
+        else if (bmi >= 35 && bmi <= 40) bmiPrime = "Obese Class II";
+        else bmiPrime = "Obese Class III";
     }
 
     //Setters and Getters
@@ -62,5 +69,10 @@ public class Person {
 
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, with your age(%d), height(%.2f) and weight(%.2f), you have BMI rating %.2f and BMI prime: %s", name, age, height, weight, bmi, bmiPrime);
     }
 }
