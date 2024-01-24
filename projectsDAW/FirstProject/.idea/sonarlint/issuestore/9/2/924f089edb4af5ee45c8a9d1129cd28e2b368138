@@ -1,6 +1,23 @@
 
 7
 java:S1220""Move this file to a named package.8îİœáÓ1
-L	java:S106"+Replace this use of System.out by a logger.(ÙœÁ‘øÿÿÿÿ8±¼ğáÓ1
-L	java:S106"+Replace this use of System.out by a logger.(ÙœÁ‘øÿÿÿÿ8±¼ğáÓ1
-G	java:S106"+Replace this use of System.out by a logger.(½ûÉ8±¼ğáÓ1
+¶
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(àªÅö8ğ¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8ó¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(ßõà8ó¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8ó¿†âÓ1
+L	java:S106"+Replace this use of System.out by a logger.(şõ¡ıÿÿÿÿ8ó¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(°Ç˜8ó¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(“Ûª¥8ó¿†âÓ1
+L	java:S106"+Replace this use of System.out by a logger.(±´Şûÿÿÿÿ8ó¿†âÓ1
+L	java:S106"+Replace this use of System.out by a logger.(˜ïªÊşÿÿÿÿ8ó¿†âÓ1
+G	java:S106"+Replace this use of System.out by a logger.(š”¹Ï8ó¿†âÓ1
+G	java:S106$"+Replace this use of System.out by a logger.(± ›»8ô¿†âÓ1
+G	java:S106%"+Replace this use of System.out by a logger.(øŸèë8ô¿†âÓ1
+L	java:S106+"+Replace this use of System.out by a logger.(šª¦òüÿÿÿÿ8õ¿†âÓ1
+L	java:S106B"+Replace this use of System.out by a logger.(òÙŸÑÿÿÿÿÿ8ö¿†âÓ1
+G	java:S106E"+Replace this use of System.out by a logger.(†Ñ˜²8ö¿†âÓ1
+L	java:S106H"+Replace this use of System.out by a logger.(ÊëÌÌÿÿÿÿÿ8ö¿†âÓ1
+L	java:S106K"+Replace this use of System.out by a logger.(Á ö›ûÿÿÿÿ8÷¿†âÓ1
+L	java:S106O"+Replace this use of System.out by a logger.(¹éÆ›ÿÿÿÿÿ8÷¿†âÓ1
+G	java:S106R"+Replace this use of System.out by a logger.(×…È8÷¿†âÓ1

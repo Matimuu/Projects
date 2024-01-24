@@ -11,7 +11,7 @@ public class Person {
     private double bmi;
     private String name, bmiPrime;
 
-    //Constructor
+    //Constructors
     public Person(String name, double weight, double height, int age) throws DataException {
         if (weight > 0 && height > 0 && age > 0 && !name.equals("") && name != null) {
             this.weight = weight;
@@ -21,6 +21,9 @@ public class Person {
         } else throw new DataException();
 
         calculateBMI();
+    }
+
+    public Person() {
 
     }
 
@@ -42,6 +45,9 @@ public class Person {
     }
 
     //Setters and Getters
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setWeight(double weight) {
         if (weight > 0) this.weight = weight;
         else throw new DataException();
@@ -59,6 +65,9 @@ public class Person {
         else throw new DataException();
     }
 
+    public String getName() {
+        return name;
+    }
     public double getWeight() {
         return weight;
     }
@@ -73,6 +82,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("%s, with your age(%d), height(%.2f) and weight(%.2f), you have BMI rating %.2f and BMI prime: %s", name, age, height, weight, bmi, bmiPrime);
+        return String.format("%-9s with your age(%d), height(%.2f) and weight(%.2f), you have BMI rating %.2f and BMI prime: %s", name + ",", age, height, weight, bmi, bmiPrime);
     }
 }
