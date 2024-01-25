@@ -15,21 +15,7 @@ public class PersonStorage implements Serializable {
     //Constructors
     public PersonStorage() {
         //Reading Objects from file
-        try (ObjectInputStream objectIS = new ObjectInputStream(new FileInputStream("/Users/omarenrique/Desktop/tests/testPersons.objct")))
-        {
-            Object plug = objectIS.readObject();
-
-            if (plug instanceof ArrayList<?>) {
-                collectionPeople = (ArrayList<Person>) plug;
-            } else {
-                collectionPeople = new ArrayList<>();
-                objectIS.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        collectionPeople = readFile();
     }
 
     //Functionality
@@ -42,17 +28,11 @@ public class PersonStorage implements Serializable {
 
         Collections.addAll(collectionPeople, firstPerson, secondPerson, thirdPerson, fourthPerson, fifthPerson);
 
-        try (ObjectOutputStream objectOS = new ObjectOutputStream(new FileOutputStream("/Users/omarenrique/Desktop/tests/testPersons.objct")))
-        {
-            objectOS.writeObject(collectionPeople);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writeFile(collectionPeople);
     }
 
     public void addPerson() {
-        try (ObjectOutputStream objectOS = new ObjectOutputStream(new FileOutputStream("/Users/omarenrique/Desktop/tests/testPersons.objct")))
-        {
+        try {
             Person plugPerson = new Person();
 
             System.out.println("Enter your name: ");
@@ -70,7 +50,7 @@ public class PersonStorage implements Serializable {
             collectionPeople.add(plugPerson);
             System.out.println(plugPerson.getName() + " was added to list");
 
-            objectOS.writeObject(collectionPeople);
+            writeFile(collectionPeople);
 
         } catch (NumberFormatException e) {
             System.out.println("Its incorrect value");
@@ -81,15 +61,42 @@ public class PersonStorage implements Serializable {
     }
 
     public void clearList() {
-        collectionPeople = new ArrayList<>();
+        writeFile(null);
         System.out.println("\nList is cleared!");
     }
 
     public void showNamesOfPerson() {
+        collectionPeople = readFile();
         collectionPeople.forEach(p -> System.out.println(p.getName()));
     }
 
     public void showListBMI() {
+        collectionPeople = readFile();
         collectionPeople.forEach(System.out::println);
+    }
+
+    private List<Person> readFile() {
+        try (ObjectInputStream objectIS = new ObjectInputStream(new FileInputStream("/Users/omarenrique/Desktop/tests/testPersons.objct"))
+        ) {
+            Object plug = objectIS.readObject();
+
+            if (plug instanceof ArrayList<?>) {
+                collectionPeople = (ArrayList<Person>) plug;
+            } else {
+                collectionPeople = new ArrayList<>();
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return collectionPeople;
+    }
+
+    private void writeFile(List<Person> collectionPeople) {
+        try (ObjectOutputStream objectOS = new ObjectOutputStream(new FileOutputStream("/Users/omarenrique/Desktop/tests/testPersons.objct"))
+        ) {
+            objectOS.writeObject(collectionPeople);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
