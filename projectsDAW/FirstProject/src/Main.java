@@ -9,12 +9,15 @@ import java.io.InputStreamReader;
 public class Main {
     private static BufferedReader console;
     private static PersonStorage ps;
+
     public static void main(String[] args) throws Exception {
         ps = PersonStorage.getInstance();
         Menu(ps);
     }
 
     private static void Menu(PersonStorage ps) throws IOException {
+        int option = -1;
+
         do {
             System.out.println("===============");
             System.out.println("Menu of Options");
@@ -27,7 +30,14 @@ public class Main {
             System.out.println("5. Clear list");
             System.out.println("6. Exit");
 
-            int option = Integer.parseInt(ps.console.readLine());
+            try {
+                console = new BufferedReader(new InputStreamReader(System.in);
+                option = Integer.parseInt(ps.console.readLine());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            } finally {
+                console.close();
+            }
 
             switch (option) {
                 case 1 -> System.out.println(addPerson());
@@ -43,7 +53,7 @@ public class Main {
         } while (true);
     }
 
-    private static String addPerson() {
+    private static String addPerson() throws IOException {
         console = new BufferedReader(new InputStreamReader(System.in));
 
         Person plugPerson = new Person();
@@ -61,7 +71,10 @@ public class Main {
             plugPerson.setWeight(Double.parseDouble(console.readLine()));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            console.close();
         }
+
         return ps.addPerson(plugPerson);
     }
 }
