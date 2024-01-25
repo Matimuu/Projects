@@ -1,9 +1,11 @@
+import java.io.Serializable;
+
 /**
  * Author: Omar Enrique Mendoza Perez
  * Date: 17/1/2024
  */
 
-public class Person {
+public class Person implements Serializable {
     //Variables
     private double weight;
     private double height;
