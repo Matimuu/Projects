@@ -6,20 +6,28 @@ import java.util.List;
 /**
  * @author Mendoza Perez Omar Enrique
  * @date 2024/01/25 11:52
+ *
+ * Singleton class
  */
 public class PersonStorage implements Serializable {
     //Variables
+    private static PersonStorage instance;
     private List<Person> collectionPeople;
     public transient BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
-    //Constructors
-    public PersonStorage() {
+
+    //Constructors and Initialization
+    private PersonStorage() {
         //Reading Objects from file
         collectionPeople = readFile();
     }
+    public static PersonStorage getInstance() {
+        if (instance == null) return new PersonStorage();
+        else return instance;
+    }
 
     //Functionality
-    public void addExamplePeople() {
+    public String addExamplePeople() {
         Person firstPerson = new Person("Omar", 87, 186, 23);
         Person secondPerson = new Person("Sasha", 50, 165, 21);
         Person thirdPerson = new Person("Fernando", 90, 175, 22);
@@ -29,50 +37,37 @@ public class PersonStorage implements Serializable {
         Collections.addAll(collectionPeople, firstPerson, secondPerson, thirdPerson, fourthPerson, fifthPerson);
 
         writeFile(collectionPeople);
+        return "Example pack was added";
     }
 
-    public void addPerson() {
-        try {
-            Person plugPerson = new Person();
-
-            System.out.println("Enter your name: ");
-            plugPerson.setName(console.readLine());
-
-            System.out.print("Enter your age: ");
-            plugPerson.setAge(Integer.parseInt(console.readLine()));
-
-            System.out.print("Enter your height: ");
-            plugPerson.setHeight(Double.parseDouble(console.readLine()));
-
-            System.out.print("Enter your weight: ");
-            plugPerson.setWeight(Double.parseDouble(console.readLine()));
-
-            collectionPeople.add(plugPerson);
-            System.out.println(plugPerson.getName() + " was added to list");
+    public String addPerson(Person person) {
+            collectionPeople.add(person);
 
             writeFile(collectionPeople);
-
-        } catch (NumberFormatException e) {
-            System.out.println("Its incorrect value");
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            return person.getName() + " was added to list";
     }
 
-    public void clearList() {
+    public String clearList() {
         writeFile(null);
-        System.out.println("\nList is cleared!");
+
+        return "\nList is cleared!";
     }
 
-    public void showNamesOfPerson() {
+    public String showNamesOfPersons() {
+        StringBuilder stringBuilder = new StringBuilder();
         collectionPeople = readFile();
-        collectionPeople.forEach(p -> System.out.println(p.getName()));
+        collectionPeople.forEach(p -> stringBuilder.append(p.getName() + "\n"));
+
+        return stringBuilder.toString();
     }
 
-    public void showListBMI() {
+    public String showListWithBMI() {
+        StringBuilder stringBuilder = new StringBuilder();
+
         collectionPeople = readFile();
-        collectionPeople.forEach(System.out::println);
+        collectionPeople.forEach(p -> stringBuilder.append(p + "\n"));
+
+        return stringBuilder.toString();
     }
 
     private List<Person> readFile() {

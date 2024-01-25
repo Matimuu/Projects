@@ -1,15 +1,28 @@
 
+g	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8µ”„Ô1
 7
-java:S1220""Move this file to a named package.8–“ ‚Ô1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–®éƒ8„ÑÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8ûŒÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(ßõà8ûŒÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8ûŒÁ‚Ô1
-L	java:S106"+Replace this use of System.out by a logger.(şõ¡ıÿÿÿÿ8ûŒÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(°Ç˜8ûŒÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(“Ûª¥8ûŒÁ‚Ô1
-L	java:S106"+Replace this use of System.out by a logger.(±´Şûÿÿÿÿ8ûŒÁ‚Ô1
-L	java:S106"+Replace this use of System.out by a logger.(˜ïªÊşÿÿÿÿ8ûŒÁ‚Ô1
-L	java:S106"+Replace this use of System.out by a logger.(ç®»êûÿÿÿÿ8ûŒÁ‚Ô1
-G	java:S106"+Replace this use of System.out by a logger.(¨õİÀ8ûŒÁ‚Ô1
-L	java:S106%"+Replace this use of System.out by a logger.(šª¦òüÿÿÿÿ8üŒÁ‚Ô1
+java:S1220""Move this file to a named package.8¶”„Ô1
+x
+java:S1450
+"VRemove the "console" field and declare it as a local variable in the relevant methods.(æ©Æ»üÿÿÿÿ8Ğ”„Ô1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–®éƒ8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(ßõà8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(ØÜ£š8Ò”„Ô1
+L	java:S106"+Replace this use of System.out by a logger.(şõ¡ıÿÿÿÿ8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(°Ç˜8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(“Ûª¥8Ò”„Ô1
+L	java:S106"+Replace this use of System.out by a logger.(±´Şûÿÿÿÿ8Ò”„Ô1
+L	java:S106"+Replace this use of System.out by a logger.(˜ïªÊşÿÿÿÿ8Ò”„Ô1
+L	java:S106"+Replace this use of System.out by a logger.(ç®»êûÿÿÿÿ8Ò”„Ô1
+G	java:S106"+Replace this use of System.out by a logger.(¨õİÀ8Ó”„Ô1
+L	java:S106!"+Replace this use of System.out by a logger.(„ãÉ­úÿÿÿÿ8Ó”„Ô1
+L	java:S106""+Replace this use of System.out by a logger.(°‘–ÿÿÿÿÿ8Ó”„Ô1
+L	java:S106#"+Replace this use of System.out by a logger.(•ªª¥şÿÿÿÿ8Ô”„Ô1
+G	java:S106$"+Replace this use of System.out by a logger.(äõ²“8Õ”„Ô1
+L	java:S106%"+Replace this use of System.out by a logger.(Ä»¶ıÿÿÿÿ8Õ”„Ô1
+L	java:S106)"+Replace this use of System.out by a logger.(šª¦òüÿÿÿÿ8Õ”„Ô1
+L	java:S1063"+Replace this use of System.out by a logger.(òÙŸÑÿÿÿÿÿ8Áİ–„Ô1
+G	java:S1066"+Replace this use of System.out by a logger.(†Ñ˜²8Õ³›„Ô1
+L	java:S1069"+Replace this use of System.out by a logger.(ÊëÌÌÿÿÿÿÿ8şŠœ„Ô1
+L	java:S106<"+Replace this use of System.out by a logger.(Á ö›ûÿÿÿÿ8àò „Ô1
