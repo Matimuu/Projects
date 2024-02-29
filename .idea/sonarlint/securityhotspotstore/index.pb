@@ -1,16 +1,10 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-R
-"src/main/java/org/example/App.java,2/6/268b09d2a5cdab7d148f0ec91f7b3fb51601410d
 S
 #src/main/java/org/example/Main.java,0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b
 Z
 *src/main/java/org/example/MainCreator.java,2/8/280517195491c53fa9a70b5a6592b30bef2a838e
-G
-src/main/java/main.java,d/3/d3c26bf08301c98991887bafaf09d331e2067b4c
-T
-$src/main/java/org/example/main2.java,0/b/0b0b05224eca685ea48067ffb3f5a977e18a146d
 S
 #src/main/java/org/example/main.java,e/5/e51cdff9495b09755863865a519c1e5117b26991
 Å
