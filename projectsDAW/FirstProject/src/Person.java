@@ -82,6 +82,10 @@ public class Person implements Serializable {
         return age;
     }
 
+    public double getBmi() {
+        return bmi;
+    }
+
     @Override
     public String toString() {
         return String.format("%-9s with your age(%d), height(%.2f) and weight(%.2f), you have BMI rating %.2f and BMI prime: %s", name + ",", age, height, weight, bmi, bmiPrime);

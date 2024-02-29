@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * @author Mendoza Perez Omar Enrique
@@ -14,12 +15,17 @@ public class PersonStorage implements Serializable {
     private static PersonStorage instance;
     private List<Person> collectionPeople;
     public transient BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+    private File storageFile = new File("resources/personList.bin");
 
 
     //Constructors and Initialization
     private PersonStorage() {
         //Reading Objects from file
-        collectionPeople = readFile();
+        try {
+            collectionPeople = readFile();
+        } catch (RuntimeException e) {
+            writeFile(collectionPeople);
+        }
     }
     public static PersonStorage getInstance() {
         if (instance == null) return new PersonStorage();
@@ -67,11 +73,18 @@ public class PersonStorage implements Serializable {
         collectionPeople = readFile();
         collectionPeople.forEach(p -> stringBuilder.append(p + "\n"));
 
-        return stringBuilder.toString();
+        return stringBuilder.toString().isEmpty() ? "List is empty" : stringBuilder.toString();
+    }
+
+    public String findMaxValue() throws NoSuchElementException {
+        collectionPeople = readFile();
+        String maxValueBMI = collectionPeople.stream().max((p1,p2) -> (int) (p1.getBmi() - p1.getBmi())).get().toString();
+
+        return maxValueBMI.isEmpty() ? "List is empty" : maxValueBMI;
     }
 
     private List<Person> readFile() {
-        try (ObjectInputStream objectIS = new ObjectInputStream(new FileInputStream("/Users/omarenrique/Desktop/tests/testPersons.objct"))
+        try (ObjectInputStream objectIS = new ObjectInputStream(new FileInputStream(storageFile))
         ) {
             Object plug = objectIS.readObject();
 
@@ -87,7 +100,7 @@ public class PersonStorage implements Serializable {
     }
 
     private void writeFile(List<Person> collectionPeople) {
-        try (ObjectOutputStream objectOS = new ObjectOutputStream(new FileOutputStream("/Users/omarenrique/Desktop/tests/testPersons.objct"))
+        try (ObjectOutputStream objectOS = new ObjectOutputStream(new FileOutputStream(storageFile))
         ) {
             objectOS.writeObject(collectionPeople);
         } catch (IOException e) {

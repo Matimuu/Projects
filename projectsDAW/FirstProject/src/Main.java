@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.NoSuchElementException;
 
 /**
  * Author: Omar Enrique Mendoza Perez
@@ -13,6 +15,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         ps = PersonStorage.getInstance();
         Menu(ps);
+
     }
 
     private static void Menu(PersonStorage ps) throws IOException {
@@ -28,15 +31,13 @@ public class Main {
             System.out.println("3. Show BMI of people");
             System.out.println("4. Add example people");
             System.out.println("5. Clear list");
-            System.out.println("6. Exit");
+            System.out.println("9. Exit");
 
             try {
-                console = new BufferedReader(new InputStreamReader(System.in);
+                console = new BufferedReader(new InputStreamReader(System.in));
                 option = Integer.parseInt(ps.console.readLine());
             } catch (NumberFormatException e) {
                 e.printStackTrace();
-            } finally {
-                console.close();
             }
 
             switch (option) {
@@ -45,7 +46,9 @@ public class Main {
                 case 3 -> System.out.println(ps.showListWithBMI());
                 case 4 -> System.out.println(ps.addExamplePeople());
                 case 5 -> System.out.println(ps.clearList());
-                case 6 -> {
+                case 6 -> System.out.println(ps.findMaxValue());
+
+                case 9 -> {
                     return;
                 }
                 default -> System.out.println("Wrong value, try again");
@@ -71,8 +74,6 @@ public class Main {
             plugPerson.setWeight(Double.parseDouble(console.readLine()));
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            console.close();
         }
 
         return ps.addPerson(plugPerson);
