@@ -1,0 +1,15 @@
+
+g	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8÷ïĞ¢ß1
+j
+java:S22599"MA "NullPointerException" could be thrown; "listaDeArchivos" is nullable here.(½·ş¬8“ğĞ¢ß1
+G	java:S106"+Replace this use of System.out by a logger.(ã‰”Ë8˜ğĞ¢ß1
+…
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(È—ş¬øÿÿÿÿ8˜ğĞ¢ß1
+L	java:S106"+Replace this use of System.out by a logger.(ÆÂæÔıÿÿÿÿ8šğĞ¢ß1
+
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(­û8šğĞ¢ß1
+€
+java:S1157#"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ƒ¥³â8›ğĞ¢ß1
+L	java:S1061"+Replace this use of System.out by a logger.(Ô˜¼§ıÿÿÿÿ8ŸğĞ¢ß1
+L	java:S1065"+Replace this use of System.out by a logger.(×Áò¤ûÿÿÿÿ8 ğĞ¢ß1
+L	java:S1067"+Replace this use of System.out by a logger.(©«èˆúÿÿÿÿ8 ğĞ¢ß1
