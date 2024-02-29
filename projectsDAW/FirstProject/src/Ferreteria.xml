@@ -1,0 +1,45 @@
+<Ferreteria>
+    <estanterias>
+        <grande>
+            <taladro_grande>
+                <para>madera</para>
+                <para>metal</para>
+            </taladro_grande>
+            <sierra_electrica>
+                <para>madera</para>
+                <para>metal</para>
+            </sierra_electrica>
+        </grande>
+
+        <mediana>
+            <sierra_de_mano>
+                <para>madera</para>
+                <para>plastico</para>
+            </sierra_de_mano>
+            <llave_ajustable>
+                <para>tuerca</para>
+                <para>tornillo</para>
+            </llave_ajustable>
+            <cinta_metrica>
+                <para>medir</para>
+            </cinta_metrica>
+        </mediana>
+
+        <pequena>
+            <taladro_pequeno>
+                <para>madera</para>
+                <para>plastico</para>
+            </taladro_pequeno>
+            <martillo>
+                <para>madera</para>
+                <para>plastico</para>
+                <para>metal</para>
+            </martillo>
+            <alicates_de_corte>
+                <para>cable</para>
+                <para>alambre</para>
+            </alicates_de_corte>
+        </pequena>
+    </estanterias>
+</Ferreteria>
+

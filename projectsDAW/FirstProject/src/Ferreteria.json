@@ -1,0 +1,60 @@
+{
+  "Ferreteria": {
+    "Estanterias": [
+      {
+        "grande": [
+          {
+            "taladro_grande": {
+              "para": [
+                "madera",
+                "metal"
+              ]
+            },
+            "sierra_electrica": {
+              "para": [
+                "madera",
+                "metal"
+              ]
+            }
+          }
+        ],
+        "mediana": [
+          {
+            "sierra_de_mano": {
+              "para": [
+                "madera",
+                "plastico"
+              ]
+            },
+            "cinta_metrica": {
+              "para": "medir"
+            }
+          }
+        ],
+        "pequena": [
+          {
+            "taladro_pequeno": {
+              "para": [
+                "madera",
+                "plastico"
+              ]
+            },
+            "martillo": {
+              "para": [
+                "madera",
+                "plastico",
+                "metal"
+              ]
+            },
+            "alicates_de_corte": {
+              "para": [
+                "cable",
+                "alambre"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
